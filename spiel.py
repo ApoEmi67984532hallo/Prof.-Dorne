@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Flucht vor Prof. Drone", page_icon="🔦")
+st.set_page_config(page_title="Flucht vor Prof. Drone", page_icon="cover.jpeg")
 
 # Spielstand & Inventar im Gedächtnis der App speichern
 if "schritt" not in st.session_state:
@@ -29,6 +29,7 @@ st.divider()
 
 # --- SCHRITT 1: START ---
 if st.session_state.schritt == "start":
+    st.image("cover.jpeg", use_container_width=True)
     st.subheader("Bist du bereit?")
     col1, col2 = st.columns(2)
     with col1:
